@@ -8,6 +8,9 @@ This is the official repository of the paper titled "Modality-independent Brain 
 
 > Traditional brain lesion segmentation models for multi-modal MRI are typically tailored to specific pathologies, relying on datasets with predefined modalities. Adapting to new MRI modalities or pathologies often requires training separate models, which contrasts with how medical professionals incrementally expand their expertise by learning from diverse datasets over time. Inspired by this human learning process, we propose a unified segmentation model capable of sequentially learning from multiple datasets with varying modalities and pathologies. Our approach leverages a privacy-aware continual learning framework that integrates a mixture-of-experts mechanism and dual knowledge distillation to mitigate catastrophic forgetting while not compromising performance on newly encountered datasets. Extensive experiments across five diverse brain MRI datasets and two dataset sequences demonstrate the effectiveness of our framework in maintaining a single adaptable model, capable of handling varying hospital protocols, imaging modalities, and disease types. Compared to widely used privacy-aware continual learning methods such as LwF, SI, and EWC, our method achieves an average Dice score improvement of approximately 16%. Our framework represents a significant step toward more versatile and practical brain lesion segmentation models.
 
+## Updates
+- :fire: July 18, 2025: Accepted in MICCAI 2025 PRIME Workshop!
+
 ## Key Contributions
 
 - **First study in this domain**: To the best of our knowledge, this is the first study exploring continual learning (CL) for brain MRI segmentation under domain shifts, including heterogeneous modalities, pathologies, and acquisition centers.
@@ -33,7 +36,7 @@ Our experiments were conducted on the following datasets:
 - [MSSEG_2016](https://www.nature.com/articles/s41598-018-31911-7)
 - [ISLES_2015](https://www.isles-challenge.org/ISLES2015/)
 
-For preprocessing, we followed the [MultiNet repository](https://github.com/WenTXuL/MultiUnet). You can use the scripts inside the `preprocess_pipeline` folder to adapt the dataset for training and inference. For convenience, the preprocessed data can be downloaded from [here]().
+For preprocessing, we followed the [MultiNet repository](https://github.com/WenTXuL/MultiUnet). You can use the scripts inside the `preprocess_pipeline` folder to adapt the dataset for training and inference. For convenience, the preprocessed data can be downloaded from [here](https://myfiles.uni-regensburg.de/filr/public-link/file-preview/0447879c97ab1d1101983cc3d7870af5/139723/3464657370784483613).
 
 <p align="center">
   <img width="900" alt="brats_vis" src="assets/BRATS_evolution_vis.png">
@@ -75,7 +78,7 @@ You can download the pre-trained weights for different sequences below:
 
 Sequence 1 weights         | Sequence 2 weights
 ---------------------------|---------------------------
-[Download](https://myfiles.uni-regensburg.de/filr/public-link/file-download/0447879c94911a8801949498544b6686/129810/5127083706323043509/Yousef_MOE_num_exp_4_beta_0.8_alpha_Dynamic_alpha_max_0.6_temp_2_optim_adam_lr_0.001_bs_4_epochs_400_drop_1%28S1%29.zip) | [Download](https://myfiles.uni-regensburg.de/filr/public-link/file-download/0447879c94911a880194949a6298668e/129811/6005144147454142615/Yousef_MOE_num_exp_4_beta_0.8_alpha_Dynamic_alpha_max_0.6_temp_2_optim_adam_lr_0.001_bs_4_epochs_400_drop_1%28S2%29.zip)                       
+[Download](https://myfiles.uni-regensburg.de/filr/public-link/file-download/0447879c94911a8801949498544b6686/129810/5127083706323043509/Yousef_MOE_num_exp_4_beta_0.8_alpha_Dynamic_alpha_max_0.6_temp_2_optim_adam_lr_0.001_bs_4_epochs_400_drop_1%28S1%29.zip) | [Download](https://myfiles.uni-regensburg.de/filr/public-link/file-download/0447879c97ab1d1101983cb730b70adc/139720/4386307368625533315/Yousef_MOE_num_exp_4_beta_0.8_alpha_Dynamic_alpha_max_0.6_temp_2_dr1_context_10_R3_optim_adam_lr_0.001_bs_4_epochs_400_drop_1%20%28S2%20Best%29.zip)                       
 
 ### Results visualization
 
@@ -99,4 +102,7 @@ If you find this work useful for your research, please cite:
 @article{sadegheih2025brainCL,
   title={Modality-independent Brain Lesion Segmentation with Privacy-aware Continual Learning},
   author={Sadegheih, Yousef and Kumari, Pratibha and Merhof, Dorit},
+  booktitle={Predictive Intelligence in Medicine},
+  year={2025},
+  organization={Springer Nature Switzerland}
 }
