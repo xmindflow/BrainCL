@@ -1,6 +1,6 @@
-# Modality-independent Brain Lesion Segmentation with Privacy-aware Continual Learning 
+# Modality-Agnostic Brain Lesion Segmentation with Privacy-aware Continual Learning 
 
-This is the official repository of the paper titled "Modality-independent Brain Lesion Segmentation with Privacy-Aware Continual Learning," which introduces a privacy-aware continual learning approach for brain lesion segmentation with variable modality inputs.
+This is the official repository of the paper titled "Modality-Agnostic Brain Lesion Segmentation with Privacy-Aware Continual Learning," which introduces a privacy-aware continual learning approach for brain lesion segmentation with variable modality inputs.
 
 > Yousef Sadegheih, Pratibha Kumari, and Dorit Merhof
 
